@@ -7,7 +7,7 @@ const cors = require("cors");
 const corsOptions = {
   credentials: true, //to enable cookies to be accepted by backend
   allowedHeaders: "content-type",
-  origin: "http://localhost:3000", //process.env.FRONTEND_URL
+  origin: process.env.FRONTEND_URL || "http://localhost:3000",
 };
 
 app.use(cors(corsOptions));
